@@ -139,6 +139,12 @@ def problem1(n):
     # and THEN try the full-credit version.
     # As always, CONTINUE to the next problem if you are STUCK on this one.
     # -------------------------------------------------------------------------
+    large_fiba = 0
+    for k in range(n):
+        if fibonacci(n) > large_fiba and fibonacci(n) < n:
+            return fibonacci(n)
+    return None
+
 
 
 ###############################################################################
