@@ -150,12 +150,14 @@ def problem5(seq_of_seq):
     # -------------------------------------------------------------------------
     y = []
     if len(seq_of_seq) == 0:
-        return None
+        return []
     max = seq_of_seq[0][0]
     for k in range(len(seq_of_seq)):
         for j in range(len(seq_of_seq[k])):
             if seq_of_seq[k][j] > max:
-                y = y + [seq_of_seq[k][j]]
+                max = seq_of_seq[k][j]
+                y = y + [max]
+                continue
     return y
 
 
